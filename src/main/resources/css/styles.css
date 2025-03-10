@@ -1,0 +1,19 @@
+.root {
+    -fx-background-color: #eaeaea;
+}
+
+.card {
+    -fx-background-color: #25282F;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 12, 0.3, 0, 4);
+}
+
+.btn {
+    -fx-background-color: #3A8EF6;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 8;
+}
+
+.label {
+    -fx-text-fill: #FFFFFF;
+}

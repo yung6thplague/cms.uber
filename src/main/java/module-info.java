@@ -4,6 +4,11 @@ module com.example.cms {
 
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.cms to javafx.fxml;
-    exports com.example.cms;
+    opens controllers to javafx.fxml;
+    opens models to javafx.base;
+
+    exports main;
+    opens main to javafx.fxml;
+    exports controllers;
+    exports models;
 }
