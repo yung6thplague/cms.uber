@@ -3,9 +3,16 @@ package models;
 import java.util.List;
 
 public class Sessao {
-    private int id, filmeId;
-    String horario, sala;
-    List<Lugar> lugares;
+    private int id, filmeId,  sala;
+    private String horario;
+    private List<Lugar> lugares;
+
+    public Sessao (int id, int filmeId, String horario, int sala){
+        this.id = id;
+        this.filmeId = filmeId;
+        this.horario = horario;
+        this.sala = sala;
+    }
 
     public int getId() {
         return id;
@@ -31,11 +38,11 @@ public class Sessao {
         this.horario = horario;
     }
 
-    public String getSala() {
+    public int getSala() {
         return sala;
     }
 
-    public void setSala(String sala) {
+    public void setSala(int sala) {
         this.sala = sala;
     }
 

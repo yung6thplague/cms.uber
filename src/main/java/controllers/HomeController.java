@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
@@ -24,9 +25,20 @@ public class HomeController implements Initializable {
     @FXML
     private FlowPane filmesPane;
 
+    @FXML
+    private ScrollPane scrollPane;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        configurarScrollSuave();
         carregarFilmes();
+    }
+
+    private void configurarScrollSuave(){
+        scrollPane.setOnScroll(event -> {
+            double deltaY = event.getDeltaY() * 0.5; // Reduz a sensibilidade
+            scrollPane.setVvalue(scrollPane.getVvalue() - deltaY);
+        });
     }
 
     private void carregarFilmes() {

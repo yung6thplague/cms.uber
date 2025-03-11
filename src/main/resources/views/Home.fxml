@@ -17,6 +17,7 @@
 
     <!-- ScrollPane para permitir rolagem, com fundo transparente -->
     <ScrollPane fitToWidth="true"
+                fx:id="scrollPane"
                 hbarPolicy="NEVER" vbarPolicy="NEVER"
                 pannable="true"
                 style="-fx-background: transparent; -fx-background-color: transparent;">
